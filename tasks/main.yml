@@ -1,14 +1,9 @@
 ---
-- name: Check if Zephir is installed.
-  stat: "path={{ zephir_path }}"
-  register: zephir_bin
-
 - name: Download Zephir.
   git:
     repo: 'https://github.com/phalcon/zephir.git'
     dest: "{{ zephir_path }}"
     version: "{{ zephir_version }}"
-    when: not zephir_bin.stat.exists
 
 - name: Install Zephir
   script: "ZEPHIRDIR={{ zephir_path }} {{ zephir_path }}/install"
