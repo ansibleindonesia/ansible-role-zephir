@@ -1,0 +1,5 @@
+---
+zephir_path: /usr/share/zephir
+zephir_version: master
+zephir_owner_user: root
+zephir_owner_group: root
