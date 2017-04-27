@@ -15,10 +15,10 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-    galaxy_tags:
-      - development
-      - zephir
-      - extension
-      - zend
-      - php
-      - phalcon
+  galaxy_tags:
+    - development
+    - zephir
+    - extension
+    - zend
+    - php
+    - phalcon
