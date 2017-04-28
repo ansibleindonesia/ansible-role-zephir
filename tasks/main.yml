@@ -5,5 +5,24 @@
     dest: "{{ zephir_path }}"
     version: "{{ zephir_version }}"
 
+- name: Update environment.
+  lineinfile:
+    dest: /etc/environment
+    line: "{{ item }}"
+    state: present
+  with_items:
+    - "ZEPHIRDIR={{ zephir_path }}"
+
 - name: Install Zephir
-  script: "ZEPHIRDIR={{ zephir_path }} {{ zephir_path }}/install"
+  shell: "{{ zephir_path }}/install -c"
+  args:
+    chdir: "{{ zephir_path }}"
+  environment:
+    ZEPHIRDIR: "{{ zephir_path }}"
+
+- name: Update ownreship.
+  file:
+    dest: "{{ zephir_path }}"
+    owner: "{{ zephir_owner_user }}"
+    group: "{{ zephir_owner_group }}"
+    recurse: yes
