@@ -18,8 +18,13 @@ cache:
   apt: true
   timeout: 691200
 
+env:
+   - SITE=test.yml
+
 install:
   - pip install ansible
+  - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
 
 script:
   - ansible --version
+  - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
