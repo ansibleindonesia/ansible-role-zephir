@@ -20,7 +20,7 @@
   environment:
     ZEPHIRDIR: "{{ zephir_path }}"
 
-- name: Update ownreship.
+- name: Update ownership.
   file:
     dest: "{{ zephir_path }}"
     owner: "{{ zephir_owner_user }}"
