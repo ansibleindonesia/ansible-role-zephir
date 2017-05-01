@@ -1,11 +1,11 @@
 ---
-- name: Download Zephir.
+- name: Download Zephir
   git:
     repo: 'https://github.com/phalcon/zephir.git'
     dest: "{{ zephir_path }}"
     version: "{{ zephir_version }}"
 
-- name: Update environment.
+- name: Update environment
   lineinfile:
     dest: /etc/environment
     line: "{{ item }}"
@@ -20,7 +20,7 @@
   environment:
     ZEPHIRDIR: "{{ zephir_path }}"
 
-- name: Update ownership.
+- name: Update ownership
   file:
     dest: "{{ zephir_path }}"
     owner: "{{ zephir_owner_user }}"
