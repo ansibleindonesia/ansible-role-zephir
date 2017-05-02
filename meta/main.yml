@@ -1,9 +1,9 @@
 ---
 galaxy_info:
   author: phalcon
-  description: "Zephir is a compiled high level language aimed to the creation of C-extensions for PHP"
-  company: "Zephir Team"
-  license: "license (MIT)"
+  description: Zephir is a compiled high level language aimed to the creation of C-extensions for PHP
+  company: Zephir Team
+  license: MIT
   min_ansible_version: 1.8
   platforms:
     - name: EL

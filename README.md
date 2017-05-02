@@ -11,7 +11,7 @@ run it in a playbook with a global `become: yes`, or invoke the role in your
 playbook like:
 
 ```yml
-- hosts: database
+- hosts: all
   roles:
     - role: phalcon.zephir
       become: yes
@@ -19,4 +19,4 @@ playbook like:
 
 ## License
 
-Zephir is open-sourced software licensed under the MIT License. See the LICENSE file for more information.
+This project is open-sourced software licensed under the MIT License. See the LICENSE file for more information.
